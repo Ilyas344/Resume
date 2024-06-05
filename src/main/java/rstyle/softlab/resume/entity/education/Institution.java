@@ -1,4 +1,4 @@
-package rstyle.softlab.resume.entity;
+package rstyle.softlab.resume.entity.education;
 
 import java.util.Date;
 import java.util.UUID;
