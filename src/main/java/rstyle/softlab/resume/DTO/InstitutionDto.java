@@ -11,9 +11,9 @@ import java.io.Serializable;
 
 @Value
 public class InstitutionDto implements Serializable {
-    @NotNull
+
     String name;
-    @NotNull
+
     String address;
     @Pattern(regexp = "^\\+(?:[0-9] ?){6,14}[0-9]$")
     String phone;

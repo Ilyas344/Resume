@@ -84,7 +84,25 @@ CREATE TABLE IF NOT EXISTS education
 );
 
 
+CREATE TABLE IF NOT EXISTS authority
+(
+    id   BIGSERIAL    NOT NULL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 
+);
+CREATE TABLE IF NOT EXISTS users
+(
+    id       BIGSERIAL          NOT NULL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(500)       NOT NULL,
+    enabled  BOOLEAN            NOT NULL
+);
+CREATE TABLE users_authorities
+(
+    user_id      BIGINT NOT NULL REFERENCES users (id),
+    authorities_id BIGINT NOT NULL REFERENCES authority (id),
+    CONSTRAINT user_authority_pk PRIMARY KEY (user_id, authorities_id)
+);
 
 
 

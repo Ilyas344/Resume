@@ -13,7 +13,6 @@ import java.io.Serializable;
 @Value
 public class CompanyDto implements Serializable {
     @NotNull
-    @NotEmpty
     String name;
     @NotNull
     String position;

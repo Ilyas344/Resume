@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @Value
 public class EducationDto implements Serializable {
-    @NotNull
+
     Boolean isGraduated;
     LocalDate startDate;
     LocalDate endDate;

@@ -9,7 +9,7 @@ import java.util.List;
 @Value
 public class ResumeDto implements Serializable {
     String name;
-    List<InstitutionDto> education;
+    List<EducationDto> education;
     List<ExperienceDto> experience;
     List<ProjectDto> projects;
 
