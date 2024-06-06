@@ -1,10 +1,10 @@
-package rstyle.softlab.resume.model.entity.experience;
-
+package rstyle.softlab.resume.model.project;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import rstyle.softlab.resume.model.Resume;
 
 import javax.persistence.*;
 
@@ -13,13 +13,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Company")
-public class Company {
+@Table(name = "Projects")
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String position;
-    private String department;
     private String description;
+    private String link;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "resume_id", nullable = false)
+    private Resume resume;
 }

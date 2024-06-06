@@ -1,4 +1,5 @@
-package rstyle.softlab.resume.model.entity.project;
+package rstyle.softlab.resume.model.experience;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,12 +13,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Projects")
-public class Project {
+@Table(name = "Company")
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String position;
+    private String department;
     private String description;
-    private String link;
 }

@@ -1,4 +1,4 @@
-package rstyle.softlab.resume.model.entity.education;
+package rstyle.softlab.resume.model.education;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
