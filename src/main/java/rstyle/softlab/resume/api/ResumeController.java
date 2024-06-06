@@ -1,7 +1,5 @@
 package rstyle.softlab.resume.api;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +12,6 @@ import rstyle.softlab.resume.mapper.ResumeMapper;
 import rstyle.softlab.resume.model.Resume;
 import rstyle.softlab.resume.repository.ResumeRepository;
 
-import java.io.IOException;
 import java.util.Optional;
 
 @RestController
@@ -37,7 +34,7 @@ public class ResumeController {
     public ResumeDto getResume(@PathVariable Long id) {
         Optional<Resume> resumeOptional = resumeRepository.findById(id);
         return resumeMapper.toDto(resumeOptional.orElseThrow(() ->
-                new ResponseStatusException(HttpStatus.NOT_FOUND, "Entity not found  with id"+id)));
+                new ResponseStatusException(HttpStatus.NOT_FOUND, "Entity not found  with id" + id)));
     }
 
 

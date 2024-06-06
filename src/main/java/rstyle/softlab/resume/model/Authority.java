@@ -16,7 +16,7 @@ public class Authority implements GrantedAuthority {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column( unique = true, length = 50)
+    @Column(unique = true, length = 50)
     private String name;
 
     @Override

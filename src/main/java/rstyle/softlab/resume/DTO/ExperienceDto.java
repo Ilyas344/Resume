@@ -1,7 +1,6 @@
 package rstyle.softlab.resume.DTO;
 
 import lombok.Value;
-import rstyle.softlab.resume.DTO.CompanyDto;
 
 import java.io.Serializable;
 import java.time.LocalDate;

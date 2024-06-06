@@ -18,7 +18,7 @@ public class User implements UserDetails {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column( unique = true, length = 50)
+    @Column(unique = true, length = 50)
     private String username;
 
     @Column(length = 500)
@@ -42,7 +42,8 @@ public class User implements UserDetails {
     }
 
     @Override
-    public boolean isCredentialsNonExpired(){return true;
+    public boolean isCredentialsNonExpired() {
+        return true;
     }
 
     @Override

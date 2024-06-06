@@ -1,6 +1,8 @@
 package rstyle.softlab.resume.mapper;
 
-import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.ReportingPolicy;
 import rstyle.softlab.resume.DTO.ExperienceDto;
 import rstyle.softlab.resume.model.experience.Experience;
 

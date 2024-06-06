@@ -3,7 +3,6 @@ package rstyle.softlab.resume.DTO;
 import lombok.Value;
 import rstyle.softlab.resume.model.education.Institution;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 

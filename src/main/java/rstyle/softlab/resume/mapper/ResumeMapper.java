@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import rstyle.softlab.resume.DTO.ResumeDto;
 import rstyle.softlab.resume.model.Resume;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING, uses = { InstitutionMapper.class, ExperienceMapper.class, ProjectMapper.class})
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING, uses = {InstitutionMapper.class, ExperienceMapper.class, ProjectMapper.class})
 public interface ResumeMapper {
     Resume toEntity(ResumeDto resumeDto);
 

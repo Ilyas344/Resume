@@ -1,6 +1,5 @@
 package rstyle.softlab.resume.api;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class UserController {
     public ResponseEntity<UserDto> create(@RequestBody UserDto dto) {
         User user = userMapper.toEntity(dto);
         User resultUser = userRepository.save(user);
-        return  ResponseEntity.status(HttpStatus.CREATED).body(userMapper.toDto(resultUser));
+        return ResponseEntity.status(HttpStatus.CREATED).body(userMapper.toDto(resultUser));
     }
 
     @DeleteMapping("/{id}")
@@ -33,6 +32,6 @@ public class UserController {
         if (user != null) {
             userRepository.delete(user);
         }
-        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }

@@ -3,7 +3,6 @@ package rstyle.softlab.resume.DTO;
 import lombok.Value;
 import rstyle.softlab.resume.model.experience.Company;
 
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
